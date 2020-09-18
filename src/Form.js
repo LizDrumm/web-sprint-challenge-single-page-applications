@@ -80,6 +80,7 @@ export default function Form(props) {
                                 id='pepperoni-input'
                             />
                         </label>
+                        <br/>
 
                         <label>
                             Sausage
@@ -91,6 +92,7 @@ export default function Form(props) {
                                 id='sausage-input'
                             />
                         </label>
+                        <br/>
 
                         <label>
                             Olives
@@ -102,6 +104,7 @@ export default function Form(props) {
                                 id='olives-input'
                             />
                         </label>
+                        <br/>
 
                         <label>
                             Mushrooms
@@ -113,6 +116,7 @@ export default function Form(props) {
                                 id='mushrooms-input'
                             />
                         </label>
+                        <br/>
                     </div>
                     
                 </div>
