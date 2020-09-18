@@ -64,9 +64,8 @@ export default function Form(props) {
                 </div>
 
                 {formErrors.size ?<p id='sauce-error'>{formErrors.size}</p> : null}
-                
                
-                
+    
                 <div>
                     Toppings
                     <div className='toppings'>
