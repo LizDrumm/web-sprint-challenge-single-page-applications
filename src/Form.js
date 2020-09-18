@@ -5,7 +5,7 @@ import { useHistory } from 'react-router-dom'
 
 export default function Form(props) {
    
-    const { updateForm, formValues, submitForm, fromErrors, disabled } = props
+    const { updateForm, formValues, submitForm, formErrors, disabled } = props
 
     
     const onChange = (event) => {
@@ -30,7 +30,12 @@ export default function Form(props) {
             <h2>Order your pizza here</h2>
 
             <form onSubmit={onSubmit}>
-        
+            <div className='errors'>
+          {/* 🔥 RENDER THE VALIDATION ERRORS HERE */}
+          <div>{formErrors.name}</div>
+           <div>{formErrors.size}</div>
+        </div>
+      
     
                 <div>
                     <label>
