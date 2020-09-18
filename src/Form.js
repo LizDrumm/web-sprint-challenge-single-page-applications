@@ -2,22 +2,22 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-//Form component
-export default function Form(props) {
-    //Deconstruct props
-    const { updateForm, formValues, submitForm, formErrors, disabled } = props
 
-    //onChange handler
+export default function Form(props) {
+   
+    const { updateForm, formValues, submitForm, fromErrors, disabled } = props
+
+    
     const onChange = (event) => {
         const { name, value, type, checked} = event.target
         const valueToUse = type === 'checkbox' ? checked : value
         updateForm(name, valueToUse)
     }
 
-    //History helper called onSubmit
+  
     const history = useHistory()
 
-    //onSubmit handler
+   
     const onSubmit = (event) => {
         event.preventDefault()
         submitForm()
@@ -27,10 +27,11 @@ export default function Form(props) {
     //Return Form
     return (
         <div className='order-form'>
-            <h2>Pizza Form</h2>
+            <h2>Order your pizza here</h2>
 
             <form onSubmit={onSubmit}>
-
+        
+    
                 <div>
                     <label>
                         Name
@@ -45,8 +46,6 @@ export default function Form(props) {
                     </label>
                 </div>
 
-                {formErrors.name ? <p id='name-error'>{formErrors.name}</p> : null}
-                
                 <div>
                     <label>
                         Size
@@ -63,8 +62,6 @@ export default function Form(props) {
                     </label>
                 </div>
 
-                {formErrors.size ?<p id='sauce-error'>{formErrors.size}</p> : null}
-               
     
                 <div>
                     Toppings

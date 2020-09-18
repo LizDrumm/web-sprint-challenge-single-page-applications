@@ -5,9 +5,9 @@ describe('Pizza Order Form', () => {
     })
 
     //selectors
-   const getTextBox = () => {return cy.get('#special-instructions')}
-   const getOrderLink = () => {return cy.get('[href="/pizza"]')}
-   const getPepperoni = () => {return cy.get('#pepperoni-input')}
+    const getTextBox = () => {return cy.get('#special-instructions')}
+    const getOrderLink = () => {return cy.get('[href="/pizza"]')}
+    const getPepperoni = () => {return cy.get('#pepperoni-input')}
     const getSausage = () => {return cy.get('#sausage-input')}
     const getMushrooms = () => {return cy.get('#mushrooms-input')}
     const getOlives = () => { return cy.get('#olives-input') }
