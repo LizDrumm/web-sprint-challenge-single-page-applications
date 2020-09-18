@@ -1,33 +1,21 @@
+//Import dependencies
 import * as yup from 'yup'
 
-import * as Yup from "yup";
-
-const formSchema = Yup.object().shape({
-name: Yup
-.string()
-.min(2, "Name must be at least 2 characters long.")
-.required("Name is required"),
-
-size: Yup
-.string()
-.oneOf(['Small', 'Medium', 'Large', 'X-Large'], "Please select a size"),
-
-special: Yup
- .string()
-
-
-// toppings: Yup
-// .boolean()
-// .oneOf([true], "Please select at least 1 topping"),
-
+//Schema object
+export default yup.object().shape({
+    name: yup
+        .string()
+        .required('Name is required')
+        .min(2, 'Name must be at least 2 characters'),
+    size: yup
+        .string()
+        .oneOf(['small', 'medium', 'large'], 'Please select a size'),
+    
+    pepperoni: yup .boolean(),
+    sausage: yup.boolean(),
+    olives: yup.boolean(),
+    mushrooms: yup.boolean(),
+    specialInstructions: yup
+        .string()
 })
 
-export default formSchema;
-
-
-
-
-// pepperoni: yup.boolean(),
-//      mushrooms: yup.boolean(),
-//      olives: yup.boolean(),
-//      extra_cheese: yup.boolean(),
